@@ -19,12 +19,13 @@ def averages(x):
     total_averages = {}
     for row in x[1:]:
         name = row[0]
-        sales = map(int,row[1:])
+        sales = list(map(int,row[1:]))
+        averages = sum(sales) / 30 
+        total_averages[name] = averages
     return total_averages
 
 w = averages(data)
 print(w)
-
 
     
 
