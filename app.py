@@ -13,8 +13,17 @@ def csv_to_list(file_path):
 
 file_path = "SalesData.csv"  
 data = csv_to_list(file_path)
-print(data)  # Output the list
+# print(data)  # Output the list
 
+def averages(x):
+    total_averages = {}
+    for row in x[1:]:
+        name = row[0]
+        sales = map(int,row[1:])
+    return total_averages
+
+w = averages(data)
+print(w)
 
 
     
